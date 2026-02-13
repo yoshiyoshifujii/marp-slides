@@ -30,11 +30,11 @@ Marp CLI でスライドを作成・管理するためのリポジトリです�
 Tailwind は CLI で `themes/tailwind.css` をビルドして使います。
 `npm run build` / `npm run pdf` / `npm run watch ...` では、事前に自動ビルドされます。
 
-各スライドの frontmatter 直後に以下を置いて読み込んでください。
+各スライドの frontmatter 直後に以下を追加してください。
 
-`<link rel="stylesheet" href="/themes/tailwind.css">`
+`<link rel="stylesheet" href="themes/tailwind.css">`
 
-先頭 `/` のルート相対パスを使うため、どの `slides/.../slide.md` からでも同じ記述で参照できます。
+`marp.config.mjs` で `baseUrl` を設定しているため、PDF 変換時も `themes/...` を解決できます。
 `npm run serve` でリポジトリルートを配信して確認してください。
 
 その後、HTML ブロック内で Tailwind のクラスを使えます。

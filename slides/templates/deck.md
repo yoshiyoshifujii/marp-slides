@@ -4,7 +4,7 @@ theme: yoshiyoshifujii
 paginate: true
 ---
 
-<link rel="stylesheet" href="/themes/tailwind.css">
+<link rel="stylesheet" href="themes/tailwind.css">
 
 # タイトル
 
