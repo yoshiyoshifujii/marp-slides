@@ -1,0 +1,16 @@
+/* @theme yoshiyoshifujii */
+
+@import 'default';
+
+section {
+  font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  font-size: 32px;
+}
+
+h1 {
+  color: #0b3d91;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
