@@ -1,0 +1,30 @@
+{
+  "name": "marp-slides",
+  "version": "1.0.0",
+  "description": "Marp CLI でスライドを作成・管理するためのリポジトリです。",
+  "scripts": {
+    "tailwind:build": "tailwindcss -i ./themes/tailwind.input.css -o ./themes/tailwind.css --minify",
+    "tailwind:watch": "tailwindcss -i ./themes/tailwind.input.css -o ./themes/tailwind.css --watch",
+    "build": "tailwindcss -i ./themes/tailwind.input.css -o ./themes/tailwind.css --minify && marp --config marp.config.mjs -I slides --html --output dist/",
+    "pdf": "tailwindcss -i ./themes/tailwind.input.css -o ./themes/tailwind.css --minify && marp --config marp.config.mjs -I slides --pdf --output dist/",
+    "watch": "./scripts/watch-slide.sh",
+    "serve": "node ./scripts/serve.mjs",
+    "clean": "rm -rf dist/* themes/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshiyoshifujii/marp-slides.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoshiyoshifujii/marp-slides/issues"
+  },
+  "homepage": "https://github.com/yoshiyoshifujii/marp-slides#readme",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3",
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}
